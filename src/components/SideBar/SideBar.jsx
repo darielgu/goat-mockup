@@ -32,14 +32,14 @@ const SideBar = () => {
       }}
     >
       {/* Top Logo of SideBar */}
-      <Box sx={{ mt: 0 }}>
+      <Box sx={{ mt: 0, mb: 2 }}>
         <Typography variant="h6" sx={{ textAlign: "center", pt: 2 }}>
           CRM Copilot
         </Typography>
       </Box>
 
       {/* Create Deal Button */}
-      <Box sx={{ p: 2 }}>
+      <Box sx={{ p: 2.3, borderTop: "1px solid #3a3a3a" }}>
         <Button sx={{ width: "100%" }} variant="outlined">
           Create Deal
         </Button>

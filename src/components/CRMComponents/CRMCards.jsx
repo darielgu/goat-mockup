@@ -1,13 +1,5 @@
 import { Grid3x3 } from "@mui/icons-material";
-import {
-  Box,
-  Grid,
-  Card,
-  CardHeader,
-  Paper,
-  Typography,
-  boxClasses,
-} from "@mui/material";
+import { Box, Paper, Typography } from "@mui/material";
 import React from "react";
 
 const CRMCard = () => {
@@ -16,14 +8,13 @@ const CRMCard = () => {
       sx={{
         display: "grid",
         gridTemplateColumns: { xs: "1fr", md: "repeat(4, 1fr)" }, // Responsive grid
-        // Converted from gap-6
-
-        marginBottom: "32px", // Converted from mb-8
+        marginBottom: "32px",
       }}
     >
+      {/* Total Pipeline card START */}
       <Paper
         sx={{
-          padding: "24px", // Converted from p-6
+          padding: "24px",
           display: "flex",
           width: 300,
           flexDirection: "column",
@@ -35,6 +26,9 @@ const CRMCard = () => {
         </Typography>
         <Typography variant="h5">$455K</Typography>
       </Paper>
+      {/* Total Pipeline card END */}
+
+      {/* Open Deals card START */}
       <Paper
         sx={{
           padding: "24px",
@@ -51,6 +45,9 @@ const CRMCard = () => {
           2 Deals
         </Typography>
       </Paper>
+      {/* Open Deals card END */}
+
+      {/* Close Rate card START */}
       <Paper
         sx={{
           padding: "24px",
@@ -67,6 +64,9 @@ const CRMCard = () => {
           73%
         </Typography>
       </Paper>
+      {/* Close Rate card END */}
+
+      {/* Growth card START */}
       <Paper
         sx={{
           padding: "24px",
@@ -83,6 +83,7 @@ const CRMCard = () => {
           +15%
         </Typography>
       </Paper>
+      {/* Growth card END */}
     </Box>
   );
 };

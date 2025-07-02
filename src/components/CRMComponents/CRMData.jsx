@@ -3,34 +3,29 @@ import { Paper, Box, TextField, Button, Typography } from "@mui/material";
 const CRMData = () => {
   return (
     <>
+      {/* Container for all data START */}
       <Paper sx={{ padding: "24px" }}>
-        {" "}
-        {/* Converted from p-6 */}
+        {/* Box holding search field and filter buttons */}
         <Box
           sx={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: "16px", // Converted from mb-4
+            marginBottom: "16px",
           }}
         >
+          {/* Input box to search */}
           <TextField
             variant="outlined"
             placeholder="Search deals or users..."
             size="small"
-            // InputProps={{
-            //   startAdornment: (
-            //     <InputAdornment position="start">
-            //       <SearchIcon />
-            //     </InputAdornment>
-            //   ),
-            // }}
-            sx={{ width: "33.333%" }} // Converted from w-1/3
+            sx={{ width: "33.333%" }}
           />
+          {/* Box holding buttons */}
           <Box
             sx={{
               display: "flex",
-              gap: "8px", // Converted from space-x-2
+              gap: "8px",
             }}
           >
             <Button variant="contained" color="primary">
@@ -42,7 +37,7 @@ const CRMData = () => {
             <Button variant="outlined" color="primary">
               Closed
             </Button>
-            {/* New button with custom sx prop */}
+            {/* Refresh insights button -- will call our gemini to repopulate our DB qwith new insights */}
             <Button
               variant="contained"
               sx={{
@@ -50,10 +45,12 @@ const CRMData = () => {
                 "&:hover": { bgcolor: "white", color: "black" },
               }}
             >
-              Custom SX Button
+              Refresh my insights
             </Button>
           </Box>
         </Box>
+        {/* Box holding search field and filter buttons END */}
+
         {/* Table Header */}
         <Box
           sx={{
@@ -84,6 +81,8 @@ const CRMData = () => {
             Last Activity
           </Typography>
         </Box>
+        {/* Table Headers END */}
+
         {/* Table Rows - Example Data */}
         {[
           {
@@ -119,6 +118,7 @@ const CRMData = () => {
             activity: "2 days ago",
           },
         ].map((row, index) => (
+          //  ROW Holding specific deal details
           <Box
             key={index}
             sx={{
@@ -169,8 +169,10 @@ const CRMData = () => {
               </Button>
             </Box>
           </Box>
+          //   ROW Holding specific deal details end
         ))}
       </Paper>
+      {/* Container for all data END */}
     </>
   );
 };

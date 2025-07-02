@@ -7,6 +7,7 @@ import CRMData from "../CRMComponents/CRMData";
 const Dashboard = () => {
   return (
     <>
+      {/* BOX that holds all components */}
       <Box
         sx={{
           minHeight: "100vh",
