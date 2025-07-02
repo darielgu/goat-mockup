@@ -2,6 +2,7 @@ import Dashboard from "./components/CRMDasboard/Dashboard";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
+import CreateDeal from "./components/CreateDeal/CreateDeal";
 // * MATERIAL THEME START
 const theme = createTheme({
   palette: {
@@ -148,6 +149,7 @@ function App() {
       <CssBaseline />
       <ThemeProvider theme={theme}>
         <Dashboard />
+        <CreateDeal />
       </ThemeProvider>
     </>
   );

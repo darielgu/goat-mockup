@@ -24,13 +24,6 @@ const CRMHeader = () => {
             Goatforce
           </Typography>
           <Avatar src={logo} sx={{ ml: 2 }} />
-
-          {/* <Chip
-            label="The CRM Copilot"
-            sx={{ ml: 2, backgroundColor: "#4fc3f7", color: "white" }}
-            size="lg"
-            icon={<AutoAwesome sx={{ fontSize: 16, color: "white" }} />}
-          ></Chip> */}
         </Box>
       </Box>
       {/* Header END */}
