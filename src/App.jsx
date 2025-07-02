@@ -1,4 +1,4 @@
-import Dashboard from "./components/Dasboard/Dashboard";
+import Dashboard from "./components/CRMDasboard/Dashboard";
 import "./App.css";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
