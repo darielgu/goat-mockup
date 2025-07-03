@@ -23,7 +23,7 @@ const SideBar = () => {
       className="sidebar-container"
       sx={{
         width: 280,
-        backgroundColor: "#1a1a1a",
+        backgroundColor: "black",
         height: "100vh",
         display: "flex",
         flexDirection: "column",
@@ -32,7 +32,10 @@ const SideBar = () => {
     >
       {/* Top Logo of SideBar */}
       <Box sx={{ mt: 0, mb: 2 }}>
-        <Typography variant="h6" sx={{ textAlign: "center", pt: 2 }}>
+        <Typography
+          variant="h6"
+          sx={{ color: "white", textAlign: "center", pt: 2 }}
+        >
           CRM Copilot
         </Typography>
       </Box>
@@ -57,7 +60,7 @@ const SideBar = () => {
               {" "}
               <Dashboard />
             </ListItemIcon>
-            <ListItemText>Dashboard</ListItemText>
+            <ListItemText sx={{ color: "white" }}>Dashboard</ListItemText>
           </ListItemButton>
         </ListItem>
         {/* Navigation to Analytics */}
@@ -72,7 +75,7 @@ const SideBar = () => {
               {" "}
               <Analytics />
             </ListItemIcon>
-            <ListItemText>Analytics</ListItemText>
+            <ListItemText sx={{ color: "white" }}>Analytics</ListItemText>
           </ListItemButton>
         </ListItem>
         {/* Navigation to Team */}
@@ -87,15 +90,13 @@ const SideBar = () => {
               {" "}
               <People />
             </ListItemIcon>
-            <ListItemText>Team</ListItemText>
+            <ListItemText sx={{ color: "white" }}>Team</ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
       {/* Secondary Navigation Section for different topic */}
       <Box sx={{ mt: 5, mb: 1, borderTop: "1px solid #3a3a3a" }}>
-        <Typography sx={{ mt: 2, px: 4, color: "secondary" }}>
-          Documents
-        </Typography>
+        <Typography sx={{ mt: 2, px: 4, color: "grey" }}>Documents</Typography>
       </Box>
       <List>
         {/* Navigation to reports */}
@@ -104,7 +105,7 @@ const SideBar = () => {
             <ListItemIcon sx={{ color: "white" }}>
               <EditDocument />
             </ListItemIcon>
-            <ListItemText>Reports</ListItemText>
+            <ListItemText sx={{ color: "white" }}>Reports</ListItemText>
           </ListItemButton>
         </ListItem>
         {/* Navigation to contacts */}
@@ -113,7 +114,7 @@ const SideBar = () => {
             <ListItemIcon sx={{ color: "white" }}>
               <Contacts />
             </ListItemIcon>
-            <ListItemText>Contacts</ListItemText>
+            <ListItemText sx={{ color: "white" }}>Contacts</ListItemText>
           </ListItemButton>
         </ListItem>
       </List>

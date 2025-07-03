@@ -20,87 +20,118 @@ const InputForm = () => {
     <Box
       sx={{
         height: "100vh",
+
+        minHeight: "fit-content",
         backgroundColor: "background.default",
         color: "text.primary",
       }}
     >
       {/*  Header Component */}
       <InputHeader />
-      {/* Beginning of Deal Description Bubble */}
-      <Card sx={{ m: 3, width: 1000 }}>
-        <CardHeader
-          avatar={<Business color="primary" />}
-          title="Deal Information"
-          subheader="Basic details about the deal opportunity"
-        />
-        <CardContent sx={{ ml: 4 }}>
-          <Grid container spacing={3}>
-            <Grid>
-              <TextField label="Company Name" />
+
+      <Box sx={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
+        <Box
+          sx={{
+            ml: 6,
+            display: "flex",
+            flexDirection: "column",
+            width: "60%",
+            mt: 3,
+          }}
+        >
+          {/* START OF FIRST CARD */}
+          <Card sx={{ m: 3, width: "90%" }}>
+            <CardHeader
+              avatar={<Business color="primary" />}
+              title="Deal Information"
+              subheader="Basic details about the deal opportunity"
+            />
+            <CardContent sx={{ ml: 4 }}>
+              <Grid container spacing={3} height={300}>
+                <Grid>
+                  <TextField width={200} label="Company Name" />
+                </Grid>
+                <Grid>
+                  <TextField label="Deal Name" />
+                </Grid>
+                <Grid>
+                  <TextField label="Value" />
+                </Grid>
+                <Grid>
+                  <TextField label="Stage" />
+                </Grid>
+                <TextField
+                  label="Description"
+                  fullWidth={true}
+                  multiline
+                  sx={{ mr: 2 }}
+                  rows={5}
+                />
+              </Grid>
+            </CardContent>
+          </Card>
+          {/* END FIRST CARD  */}
+        </Box>
+        {/* Right-Side Card START */}
+        <Card sx={{ width: "30%", height: 410, mt: 6 }}>
+          <CardHeader
+            avatar={<Person />}
+            title="Contact Information"
+            subheader="Enter information on the main point of contact"
+          />
+          <CardContent sx={{ mt: 2 }}>
+            <Grid sx={{ width: "100%" }}>
+              <TextField sx={{ mb: 2 }} fullWidth={true} label="Contact Name" />
+              <TextField
+                sx={{ mb: 2 }}
+                fullWidth={true}
+                label="Contact Email"
+              />
+              <TextField
+                sx={{ mb: 2 }}
+                fullWidth={true}
+                label="Contact Slack"
+              />
+
+              <TextField
+                sx={{ mb: 2 }}
+                fullWidth={true}
+                label="Contact Number"
+              />
             </Grid>
-            <Grid>
-              <TextField label="Deal Name" />
-            </Grid>
-            <Grid>
-              <TextField label="Value" />
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
-      {/* END Deal Description  */}
-      {/* Contact info Description bubble */}
-      <Card sx={{ m: 3, width: 1000 }}>
+          </CardContent>
+        </Card>
+        {/* Right Side Card END */}
+      </Box>
+      {/* Second Card Information START*/}
+      <Card
+        sx={{
+          m: 3,
+          ml: 8.5,
+          mr: 4,
+          width: "89%",
+        }}
+      >
         <CardHeader
           avatar={<Person />}
-          title="Contact Information"
+          title="Additional Information"
           subheader="Enter information on the main point of contact"
         />
         <CardContent sx={{ ml: 4 }}>
           <Grid container spacing={3}>
             <Grid>
-              <TextField label="Expected Close Date" />
+              <TextField label="Product/Service Line Item(s)" />
             </Grid>
             <Grid>
-              <TextField label="Assigned Sales Rep" />
-            </Grid>
-          </Grid>
-        </CardContent>
-        {/* Description Text Bubble */}
-      </Card>
-      <Card sx={{ m: 3, width: 1000 }}>
-        <CardHeader
-          avatar={<Person />}
-          title="Contact Information"
-          subheader="Enter information on the main point of contact"
-        />
-        <CardContent sx={{ ml: 4 }}>
-          <Grid container spacing={3}>
-            <Grid>
-              <TextField label="Expected Close Date" />
+              <TextField label="Contract Term" />
             </Grid>
             <Grid>
-              <TextField label="Assigned Sales Rep" />
+              <TextField label="Tag" />
             </Grid>
           </Grid>
         </CardContent>
       </Card>
-      <Card sx={{ m: 3, pl: 5, width: 400 }}>
-        <CardHeader
-          avatar={<Person />}
-          title="Contact Information"
-          subheader="Enter information on the main point of contact"
-        />
-        <CardContent sx={{ ml: 4 }}>
-          <Grid container spacing={3}>
-            <Grid>
-              <TextField label="Expected Close Date" />
-            </Grid>
-            <Grid>
-              <TextField label="Assigned Sales Rep" />
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
+      {/* Second Card Information END */}
     </Box>
   );
 };

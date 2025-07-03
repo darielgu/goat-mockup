@@ -20,7 +20,10 @@ const Header = () => {
             height: "100%",
           }}
         >
-          <Typography variant="h5" sx={{ textAlign: "center", ml: 3 }}>
+          <Typography
+            variant="h5"
+            sx={{ textAlign: "center", ml: 3, color: "white" }}
+          >
             Goatforce
           </Typography>
           <Avatar src={logo} sx={{ ml: 2 }} />

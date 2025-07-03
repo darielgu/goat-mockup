@@ -1,7 +1,7 @@
 import { CssBaseline, Box } from "@mui/material";
 import React from "react";
 import SideBar from "../SideBar/SideBar";
-import CRMHeader from "../CRMComponents/CRMHeader";
+import Header from "../DefaultComponents/Header";
 import CRMCards from "../CRMComponents/CRMCards";
 import CRMData from "../CRMComponents/CRMData";
 const Dashboard = () => {
@@ -26,7 +26,7 @@ const Dashboard = () => {
             overflowX: "hidden", // Prevent horizontal scroll from inner elements
           }}
         >
-          <CRMHeader /> {/* The header component */}
+          <Header /> {/* The header component */}
           {/* Container for cards and data to apply common padding and max-width */}
           <Box
             sx={{
