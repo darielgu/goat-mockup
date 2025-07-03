@@ -1,4 +1,5 @@
 import { AutoAwesome, Business, Person } from "@mui/icons-material";
+import CreateIcon from "@mui/icons-material/Create";
 import {
   Box,
   Button,
@@ -12,6 +13,9 @@ import {
   CardHeader,
   Grid,
 } from "@mui/material";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import React, { useState } from "react";
 import InputHeader from "./InputHeader";
 
@@ -113,20 +117,28 @@ const InputForm = () => {
         }}
       >
         <CardHeader
-          avatar={<Person />}
+          avatar={<CreateIcon />}
           title="Additional Information"
-          subheader="Enter information on the main point of contact"
+          subheader="Reccomended optional details "
         />
         <CardContent sx={{ ml: 4 }}>
-          <Grid container spacing={3}>
-            <Grid>
-              <TextField label="Product/Service Line Item(s)" />
+          <Grid container spacing={5}>
+            <Grid sx={{ width: "20%" }}>
+              <TextField
+                fullWidth={true}
+                label="Product/Service Line Item(s)"
+              />
+            </Grid>
+            <Grid sx={{ width: "20%" }}>
+              <TextField fullWidth={true} label="Contract Term" />
+            </Grid>
+            <Grid sx={{ width: "20%" }}>
+              <TextField fullWidth={true} label="Tag(s)" />
             </Grid>
             <Grid>
-              <TextField label="Contract Term" />
-            </Grid>
-            <Grid>
-              <TextField label="Tag" />
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker label="EST Close Date" />
+              </LocalizationProvider>
             </Grid>
           </Grid>
         </CardContent>
