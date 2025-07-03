@@ -35,7 +35,7 @@ const theme = createTheme({
       main: "#facc15", // yellow-400
     },
     success: {
-      main: "#4ade80", // green-400
+      main: "#2DEB80", // green-400 #49DE80
     },
     info: {
       main: "#06b6d4", // cyan-500

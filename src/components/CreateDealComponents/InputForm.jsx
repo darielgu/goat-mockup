@@ -79,7 +79,7 @@ const InputForm = () => {
         {/* Right-Side Card START */}
         <Card sx={{ width: "30%", height: 410, mt: 6 }}>
           <CardHeader
-            avatar={<Person />}
+            avatar={<Person color="primary" />}
             title="Contact Information"
             subheader="Enter information on the main point of contact"
           />
@@ -117,7 +117,7 @@ const InputForm = () => {
         }}
       >
         <CardHeader
-          avatar={<CreateIcon />}
+          avatar={<CreateIcon color="primary" />}
           title="Additional Information"
           subheader="Reccomended optional details "
         />
