@@ -12,7 +12,7 @@ const InputHeader = () => {
       <Paper
         sx={{
           borderRadius: 0,
-          backgroundColor: "black",
+          backgroundColor: "primary",
           borderBottom: "1px solid",
           borderColor: "divider",
           px: 3,

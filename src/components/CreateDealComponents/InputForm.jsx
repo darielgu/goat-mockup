@@ -44,16 +44,25 @@ const InputForm = () => {
           }}
         >
           {/* START OF FIRST CARD */}
-          <Card sx={{ m: 3, width: "90%" }}>
+          <Card
+            sx={{
+              m: 3,
+              maxWidth: 900,
+              minWidth: 500,
+              overflowY: "scroll",
+              scrollbarColor: "primary",
+              scrollbarWidth: "none",
+            }}
+          >
             <CardHeader
               avatar={<Business color="primary" />}
               title="Deal Information"
               subheader="Basic details about the deal opportunity"
             />
-            <CardContent sx={{ ml: 4 }}>
-              <Grid container spacing={3} height={300}>
+            <CardContent sx={{ ml: 1 }}>
+              <Grid container spacing={2} height={300}>
                 <Grid>
-                  <TextField width={200} label="Company Name" />
+                  <TextField label="Company Name" />
                 </Grid>
                 <Grid>
                   <TextField label="Deal Name" />
@@ -77,7 +86,7 @@ const InputForm = () => {
           {/* END FIRST CARD  */}
         </Box>
         {/* Right-Side Card START */}
-        <Card sx={{ width: "30%", height: 410, mt: 6 }}>
+        <Card sx={{ maxWidth: 470, minWidth: 200, height: 410, mt: 6 }}>
           <CardHeader
             avatar={<Person color="primary" />}
             title="Contact Information"
@@ -121,7 +130,7 @@ const InputForm = () => {
           title="Additional Information"
           subheader="Reccomended optional details "
         />
-        <CardContent sx={{ ml: 4 }}>
+        <CardContent sx={{ ml: 1 }}>
           <Grid container spacing={5}>
             <Grid sx={{ width: "20%" }}>
               <TextField
