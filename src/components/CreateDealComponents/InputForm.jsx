@@ -39,7 +39,7 @@ const InputForm = () => {
             ml: 6,
             display: "flex",
             flexDirection: "column",
-            width: "60%",
+            width: 930,
             mt: 3,
           }}
         >
@@ -48,7 +48,7 @@ const InputForm = () => {
             sx={{
               m: 3,
               maxWidth: 900,
-              minWidth: 500,
+              minWidth: 300,
               overflowY: "scroll",
               scrollbarColor: "primary",
               scrollbarWidth: "none",
@@ -77,16 +77,16 @@ const InputForm = () => {
                   label="Description"
                   fullWidth={true}
                   multiline
-                  sx={{ mr: 2 }}
                   rows={5}
                 />
               </Grid>
             </CardContent>
           </Card>
-          {/* END FIRST CARD  */}
         </Box>
+        {/* END FIRST CARD  */}
+
         {/* Right-Side Card START */}
-        <Card sx={{ maxWidth: 470, minWidth: 200, height: 410, mt: 6 }}>
+        <Card sx={{ maxWidth: 470, minWidth: 200, height: 410, mt: 6, ml: 4 }}>
           <CardHeader
             avatar={<Person color="primary" />}
             title="Contact Information"
@@ -114,15 +114,18 @@ const InputForm = () => {
             </Grid>
           </CardContent>
         </Card>
-        {/* Right Side Card END */}
       </Box>
+
+      {/* Right Side Card END */}
+
       {/* Second Card Information START*/}
       <Card
         sx={{
           m: 3,
           ml: 8.5,
           mr: 4,
-          width: "89%",
+          maxWidth: 1410,
+          minWidth: 300,
         }}
       >
         <CardHeader
