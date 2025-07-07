@@ -6,8 +6,9 @@ const CRMCard = () => {
   return (
     <Box
       sx={{
-        display: "grid",
-        gridTemplateColumns: { xs: "1fr", md: "repeat(4, 1fr)" }, // Responsive grid
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
         marginBottom: "32px",
       }}
     >
@@ -16,7 +17,7 @@ const CRMCard = () => {
         sx={{
           padding: "24px",
           display: "flex",
-          width: 300,
+          width: 250,
           flexDirection: "column",
           alignItems: "flex-start",
         }}
@@ -35,13 +36,13 @@ const CRMCard = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          width: 300,
+          width: 250,
         }}
       >
         <Typography variant="body2" color="text.secondary">
-          Open Deals
+          Deals At Risk
         </Typography>
-        <Typography variant="h5" sx={{ color: "primary.main" }}>
+        <Typography variant="h5" sx={{ color: "error.main" }}>
           2 Deals
         </Typography>
       </Paper>
@@ -54,7 +55,7 @@ const CRMCard = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          width: 300,
+          width: 250,
         }}
       >
         <Typography variant="body2" color="text.secondary">
@@ -73,7 +74,7 @@ const CRMCard = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "flex-start",
-          width: 300,
+          width: 250,
         }}
       >
         <Typography variant="body2" color="text.secondary">

@@ -17,7 +17,7 @@ const CRMData = () => {
           {/* Input box to search */}
           <TextField
             variant="outlined"
-            placeholder="Search deals or users..."
+            placeholder="Search deals..."
             size="small"
             sx={{ width: "33.333%" }}
           />
@@ -28,7 +28,7 @@ const CRMData = () => {
               gap: "8px",
             }}
           >
-            <Button variant="contained" color="primary">
+            <Button variant="outlined" color="primary">
               All Deals
             </Button>
             <Button variant="outlined" color="primary">
@@ -66,7 +66,7 @@ const CRMData = () => {
             Deal
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Rep
+            Company
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Stage
@@ -86,32 +86,40 @@ const CRMData = () => {
         {/* Table Rows - Example Data */}
         {[
           {
-            deal: "Enterprise SaaS Platform - Acme Corp",
-            rep: "Sarah Chen",
+            deal: "Cloud Sync Expansion",
+            company: "Nike",
             stage: "Negotiation",
             value: "$120,000",
             risk: "Low",
             activity: "2 days ago",
           },
           {
-            deal: "Marketing Automation Suite - TechFlow",
-            rep: "Mike Rodriguez",
+            deal: "Global CRM Overhaul",
+            company: "Fedex",
             stage: "Proposal",
             value: "$85,000",
             risk: "Medium",
             activity: "1 day ago",
           },
           {
-            deal: "Data Analytics Platform - InnovateCo",
-            rep: "Emily Watson",
+            deal: "Marketing Cloud Lite",
+            company: "Spotify",
             stage: "Discovery",
             value: "$200,000",
             risk: "High",
             activity: "Today",
           },
           {
-            deal: "CRM Integration - StartupXYZ",
-            rep: "David Kim",
+            deal: "Sales Suite Upgrade",
+            company: "Airbnb",
+            stage: "Qualified",
+            value: "$40,000",
+            risk: "Medium",
+            activity: "2 days ago",
+          },
+          {
+            deal: "Data360 Integration",
+            company: "Bank of America",
             stage: "Qualified",
             value: "$40,000",
             risk: "Medium",
@@ -131,7 +139,7 @@ const CRMData = () => {
             }}
           >
             <Typography variant="body1">{row.deal}</Typography>
-            <Typography variant="body1">{row.rep}</Typography>
+            <Typography variant="body1">{row.company}</Typography>
             <Typography variant="body1">{row.stage}</Typography>
             <Typography
               variant="body1"
@@ -165,7 +173,7 @@ const CRMData = () => {
             >
               <Typography variant="body1">{row.activity}</Typography>
               <Button variant="contained" color="primary" size="small">
-                Follow Up
+                View
               </Button>
             </Box>
           </Box>

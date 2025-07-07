@@ -20,11 +20,14 @@ import React, { useState } from "react";
 import InputHeader from "./InputHeader";
 
 const InputForm = () => {
+  const handleDateChange = (date) => {
+    console.log(date.toJSON().substring(0, 10));
+    // gives Date as a string of 2025-07-12
+  };
   return (
     <Box
       sx={{
         height: "100vh",
-
         minHeight: "fit-content",
         backgroundColor: "background.default",
         color: "text.primary",
@@ -39,7 +42,7 @@ const InputForm = () => {
             ml: 6,
             display: "flex",
             flexDirection: "column",
-            width: 930,
+            width: "60%",
             mt: 3,
           }}
         >
@@ -47,8 +50,7 @@ const InputForm = () => {
           <Card
             sx={{
               m: 3,
-              maxWidth: 900,
-              minWidth: 300,
+              width: "90%",
               overflowY: "scroll",
               scrollbarColor: "primary",
               scrollbarWidth: "none",
@@ -86,7 +88,9 @@ const InputForm = () => {
         {/* END FIRST CARD  */}
 
         {/* Right-Side Card START */}
-        <Card sx={{ maxWidth: 470, minWidth: 200, height: 410, mt: 6, ml: 4 }}>
+        <Card
+          sx={{ maxWidth: "30%", minWidth: 200, height: 410, mt: 6, ml: 4 }}
+        >
           <CardHeader
             avatar={<Person color="primary" />}
             title="Contact Information"
@@ -124,7 +128,7 @@ const InputForm = () => {
           m: 3,
           ml: 8.5,
           mr: 4,
-          maxWidth: 1410,
+          maxWidth: "91%",
           minWidth: 300,
         }}
       >
@@ -149,7 +153,10 @@ const InputForm = () => {
             </Grid>
             <Grid>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DatePicker label="EST Close Date" />
+                <DatePicker
+                  onChange={handleDateChange}
+                  label="EST Close Date"
+                />
               </LocalizationProvider>
             </Grid>
           </Grid>
